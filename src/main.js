@@ -4,17 +4,26 @@ import Recipe from "./happyRecipe";
 
 import IngredientsList from "./ingredientsList";
 import { getRecipeFromMistral } from "./ai";
-// import { apiKey } from "./config";
-const apiKey = "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";
+import { HF_API_KEY } from "./config";
+
+console.log("KEY:", HF_API_KEY);
+
+
+
+
+// console.log("API KEY:", HF_API_KEY || "Not Found");
+// console.log("env test:", import.meta.env.VITE_HF_ACCESS_TOKEN);
+
 
 export default function Main() {
-  // const apiKey = import.meta.env.HF_ACCESS_TOKEN;
+  // const HF_API_KEY = import.meta.env.HF_ACCESS_TOKEN;
   const [ingredients, setIngredients] = React.useState([]);
+  
 
   const [recipe, setRecipe] = React.useState("");
 
   async function getRecipe() {
-    const recipeMarkdown = await getRecipeFromMistral(ingredients, apiKey);
+    const recipeMarkdown = await getRecipeFromMistral(ingredients, HF_API_KEY);
     setRecipe(recipeMarkdown);
     // console.log(recipeMarkdown);
   }
@@ -39,6 +48,13 @@ export default function Main() {
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
     // console.log(ingredients);
   }
+  //remove ingredient
+  function removeIngredient(indexToRemove) {
+  setIngredients((prevIngredients) =>
+    prevIngredients.filter((_, index) => index !== indexToRemove)
+  );
+}
+
 
   return (
     <>
@@ -58,6 +74,7 @@ export default function Main() {
           ref={recipeSection}
           getRecipe={getRecipe}
           ingredients={ingredients}
+          removeIngredient={removeIngredient}
         />
       )}
       {/* recipe section */}
