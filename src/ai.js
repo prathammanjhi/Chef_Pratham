@@ -1,10 +1,10 @@
 // src/utils/ai.js
 import { InferenceClient } from "@huggingface/inference";
-// import { HF_API_KEY } from "./config";
-const HF_API_KEY = "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";
+import { HF_API_KEY } from "./config";
+const apiKey = HF_API_KEY
 
 export async function getRecipeFromMistral(ingredientsArr) {
-  const hf = new InferenceClient(HF_API_KEY);
+  const hf = new InferenceClient(apiKey);
   const ingredientsString = ingredientsArr.join(", ");
 
   try {
