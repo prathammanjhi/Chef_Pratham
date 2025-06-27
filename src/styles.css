@@ -1,0 +1,112 @@
+body {
+  background-color: rgba(148, 244, 52, 0.087);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  background-color: rgba(105, 105, 105, 0.274);
+}
+.head > h2 {
+  color: rgba(3, 140, 26, 0.674)
+  font-family: sans-serif;
+  padding-bottom: 0.8em;
+  font-weight: 600;
+}
+#image {
+  padding: 0;
+  margin: 0;
+}
+.daalo {
+  margin-top: 2.5rem;
+  display: flex;
+  /* justify-content: center; */
+  width: 80vw;
+  /* margin-left: 22vw; */
+  justify-self: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  #input {
+    padding: 4px;
+    padding-left: 1em;
+    width: 60%;
+  }
+}
+#add {
+  border: none;
+  color: white;
+  background-color: rgb(0, 160, 19);
+  width: 30%;
+  border-radius: 5px;
+  margin-left: 1rem;
+  gap: 12px;
+}
+#add::before {
+  content: "+";
+  margin-right: 6px;
+}
+.itemList {
+  justify-self: left;
+  align-content: center;
+  /* height: 30vh; */
+  margin-left: 0.8em;
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+.itemList > li {
+  text-align: left;
+  padding-top: 8px;
+}
+
+.items {
+  margin-top: 3em;
+  margin-left: 11%;
+  margin-bottom: 3em;
+}
+.items > h2 {
+  justify-self: left;
+}
+
+.generator {
+  display: flex;
+  box-sizing: border-box;
+  background-color: rgba(105, 105, 105, 0.274);
+  width: 90%;
+  height: 5em;
+  justify-content: space-between;
+  padding: 1em;
+  border-radius: 10px;
+}
+.content > h3 {
+  justify-self: left;
+  font-size: medium;
+}
+.content > p {
+  font-size: small;
+  padding-top: 10px;
+}
+.generator > button {
+  background-color: rgba(255, 68, 0, 0.616);
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  height: 2.5em;
+  justify-self: center;
+}
+.suggested_recipe{
+  margin-bottom: 5em;
+}
