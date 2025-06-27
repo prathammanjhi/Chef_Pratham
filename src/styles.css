@@ -22,7 +22,7 @@ body {
   background-color: rgba(105, 105, 105, 0.274);
 }
 .head > h2 {
-  color: rgba(3, 140, 26, 0.674)
+  color: rgba(3, 140, 26, 0.674);
   font-family: sans-serif;
   padding-bottom: 0.8em;
   font-weight: 600;
@@ -54,6 +54,7 @@ body {
   border-radius: 5px;
   margin-left: 1rem;
   gap: 12px;
+  cursor: pointer;
 }
 #add::before {
   content: "+";
@@ -106,7 +107,54 @@ body {
   padding: 7px;
   height: 2.5em;
   justify-self: center;
+  cursor: pointer;
 }
-.suggested_recipe{
-  margin-bottom: 5em;
+.suggested_recipe {
+  text-align: left;         /* Force left alignment */
+  padding: 1rem 1.5rem;     /* Space on sides */
+  max-width: 700px;         /* Optional: limit width */
+  margin: 0 auto;           /* Center the box itself, not the text */
+  line-height: 1.6;         /* Better readability */
+  font-size: 1rem;          /* Tweak as needed */
+}
+
+.suggested_recipe h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.suggested_recipe ul,
+.suggested_recipe ol {
+  padding-left: 1.2rem; /* Indent lists */
+  margin-bottom: 1rem;
+}
+
+.suggested_recipe li {
+  margin-bottom: 0.5rem;
+}
+
+.suggested_recipe p {
+  margin-bottom: 1rem;
+}
+
+.markdown-body {
+  line-height: 1.7;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  padding: 1rem;
+}
+
+.markdown-body ul {
+  list-style: '🍴 ';
+  padding-left: 1.5rem;
+}
+
+.markdown-body ol {
+  padding-left: 1.5rem;
+}
+
+.markdown-body h2, .markdown-body h3 {
+  color: #7f027f;
+  margin-top: 1rem;
 }

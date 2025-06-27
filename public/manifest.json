@@ -1,0 +1,35 @@
+{
+  "name": "AI Recipe Generator",
+  "short_name": "RecipeGen",
+  "description": "Generate AI-powered recipes with ingredients you already have!",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7f02ff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+  {
+    "src": "wide.png",
+    "sizes": "800x600",
+    "type": "image/png",
+    "form_factor": "wide"
+  },
+  {
+    "src": "mobile.png",
+    "sizes": "800x600",
+    "type": "image/png"
+  }
+]
+}
